@@ -1,2 +1,3 @@
-# advent-of-code
-Advent of Code
+# Advent of Code
+
+Playground for [Advent of Code](https://adventofcode.com).
