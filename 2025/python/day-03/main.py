@@ -62,7 +62,6 @@ def solve_part_2(data: list[str]) -> int:
         tracked_index = 0
         joltage_digits = []
         for k in range(12):
-            #
             end_index = len(digits) - 11 + k
             new_index, d = get_highest_number_in_range(
                 digits, start_index=tracked_index, end_index=end_index
