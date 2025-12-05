@@ -28,18 +28,24 @@ def solve_part_1(
 def solve_part_2(fresh_ingredient_ranges: list[tuple[int, int]]) -> int:
     fresh_id_count = 0
     tracked_range: tuple[int, int] | None = None
+    # sort to merge overlapping/adjacent ranges
     for ir in sorted(fresh_ingredient_ranges):
         start, end = ir
         if tracked_range is None:
             tracked_range = (start, end)
         else:
+            # extend the tracked range if overlapping
             if start <= tracked_range[1] + 1:
                 tracked_range = (tracked_range[0], max(tracked_range[1], end))
+            # no overlap - count the tracked range and start a new one
             else:
                 fresh_id_count += tracked_range[1] - tracked_range[0] + 1
                 tracked_range = (start, end)
+
+    # count the final tracked range
     if tracked_range is not None:
         fresh_id_count += tracked_range[1] - tracked_range[0] + 1
+
     return fresh_id_count
 
 
