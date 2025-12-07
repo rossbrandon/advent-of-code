@@ -22,7 +22,7 @@ def parse_part_1(lines: list[str]) -> list[tuple[int, ...]]:
 
 
 def parse_part_2(lines: list[str]) -> list[tuple[str, ...]]:
-    """Parse characters in each column: spaces and numbers."""
+    """Parse characters in each column: spaces and numbers, then transpose to get problem columns."""
     return list(transpose(lines))
 
 
