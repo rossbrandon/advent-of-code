@@ -1,4 +1,4 @@
-# Day 6: Trash Compactor ---
+# Day 6: Trash Compactor
 
 ## Part One
 
